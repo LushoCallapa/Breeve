@@ -7,7 +7,8 @@ export default {
     extend: {
       fontFamily: {
         helvetica: ['Helvetica', 'Arial', 'sans-serif'],
-        dmsans: ['"DM Sans"', 'sans-serif'], 
+        dmsans: ['DM Sans', 'sans-serif'], 
+        bebas: ['Bebas Neue', 'sans-serif'],
       },
     },
   },
