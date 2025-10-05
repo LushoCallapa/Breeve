@@ -10,7 +10,7 @@ export default function AirQualityMap() {
         <form className="w-full max-w-md relative">
           <input
             type="text"
-            defaultValue="Madrid"
+            defaultValue="La Paz"
             className="w-full px-4 py-3 text-xl rounded-full border-2 border-white text-white bg-black/30 backdrop-blur-sm text-center focus:outline-none focus:ring-2 focus:ring-blue-400 pr-12"
           />
           <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white">
@@ -36,7 +36,7 @@ export default function AirQualityMap() {
           <div className="flex justify-between items-center">
             <span className="font-bold pl-2 text-3xl">PM</span>
             <span className="text-2xl">Partículas Finas</span>
-            <span className="bg-green-500 px-2 py-1 rounded text-md">11 μg/m³</span>
+            <span className="bg-green-500 px-2 py-1 rounded text-md">10 μg/m³</span>
           </div>
           <div className="text-md lg:text-xl">
             <div className="bg-[#2b2f48]/60 p-2 rounded-full mb-6 text-center">
@@ -45,13 +45,13 @@ export default function AirQualityMap() {
             <div className="mt-2 bg-[#2b2f48]/60 p-2 mb-6 rounded-full">
               <div className="flex items-center justify-between gap-4">
                 <div className="text-center">Pronóstico de PM:</div>
-                <div className="text-center">Lunes<br />12</div>
-                <div className="text-center">Martes<br />40</div>
-                <div className="text-center">Miércoles<br />22</div>
+                <div className="text-center">Lunes<br />51</div>
+                <div className="text-center">Martes<br />55</div>
+                <div className="text-center">Miércoles<br />54</div>
               </div>
             </div>
             <div className="mt-2 bg-[#2b2f48]/60 p-2 rounded-full text-center">
-              Ubicación: <strong>Madrid, España</strong>
+              Ubicación: <strong>La Paz, Bolivia</strong>
             </div>
           </div>
         </div>

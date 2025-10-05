@@ -2,28 +2,28 @@ import WeeklyForecast from "../components/WeeklyForecast";
 
 export default function CalidadAire() {
   const weeklyForecastData = [
-    { day: "Hoy", value: 191, color: "bg-red-400" },
-    { day: "Lunes", value: 180, color: "bg-red-400" },
-    { day: "Martes", value: 174, color: "bg-red-400" },
-    { day: "Miércoles", value: 160, color: "bg-red-400" },
-    { day: "Jueves", value: 184, color: "bg-orange-400" },
-    { day: "Viernes", value: 134, color: "bg-orange-300" },
-    { day: "Sábado", value: 125, color: "bg-yellow-300" },
+    { day: "Hoy", value: 51, color: "bg-yellow-400" },
+    { day: "Lunes", value: 55, color: "bg-yellow-400" },
+    { day: "Martes", value: 54, color: "bg-yellow-400" },
+    { day: "Miércoles", value: 52, color: "bg-yellow-400" },
+    { day: "Jueves", value: 52, color: "bg-yellow-400" },
+    { day: "Viernes", value: 53, color: "bg-yellow-300" },
+    { day: "Sábado", value: 55, color: "bg-yellow-300" },
   ];
 
   const pronosticoHora = [
-    { hora: "Ahora", valor: 192, gas: "CO₂ / NO₂" },
-    { hora: "13:00", valor: 192, gas: "CO₂ / NO₂" },
-    { hora: "14:00", valor: 192, gas: "CO₂ / NO₂" },
-    { hora: "15:00", valor: 192, gas: "CO₂ / NO₂" },
-    { hora: "16:00", valor: 192, gas: "CO₂ / NO₂" },
+    { hora: "Ahora", valor: 51, gas: "CO₂ / NO₂" },
+    { hora: "13:00", valor: 53, gas: "CO₂ / NO₂" },
+    { hora: "14:00", valor: 53, gas: "CO₂ / NO₂" },
+    { hora: "15:00", valor: 52, gas: "CO₂ / NO₂" },
+    { hora: "16:00", valor: 51, gas: "CO₂ / NO₂" },
   ];
 
   return (
     <div className="w-full bg-[#f5f7fb] text-[#113a58] p-6 flex flex-col items-center gap-6">
-      {/* Leyenda con scroll horizontal */}
+      {/* Leyenda */}
       <div className="w-full mt-16 lg:mt-0 overflow-x-auto overflow-y-hidden">
-        <div className="flex gap-2 px-2 py-2 min-w-max">
+        <div className="flex gap-2 px-2 py-2 min-w-max lg:justify-center">
           <span className="bg-green-300 px-3 py-1 rounded flex-shrink-0 whitespace-nowrap">
             0–50 Bueno
           </span>
@@ -52,12 +52,12 @@ export default function CalidadAire() {
       {/* Tarjeta principal */}
       <div className="flex flex-col md:flex-row gap-6 w-full max-w-5xl">
         {/* Sección izquierda */}
-        <div className="bg-[#f9b0a6] rounded-lg p-4 sm:p-6 flex-1 text-white shadow-lg">
+        <div className="bg-yellow-300 rounded-lg p-4 sm:p-6 flex-1 text-white shadow-lg">
           <div className="flex items-center justify-between">
             {/* Columna izquierda */}
             <div>
               <div>
-                <p className="font-bold text-base sm:text-lg text-[#9e0c0d]">
+                <p className="font-bold text-base sm:text-lg text-orange-900">
                   La Paz, Bolivia
                 </p>
                 <p className="text-sm sm:text-md text-[#9e0c0d]">
@@ -65,10 +65,10 @@ export default function CalidadAire() {
                 </p>
               </div>
 
-              <div className="bg-[#f65e5f] rounded-2xl mt-3 sm:mt-4 p-2 sm:p-3 text-center">
+              <div className="bg-yellow-100  rounded-2xl mt-3 sm:mt-4 p-2 sm:p-3 text-center text-orange-700">
                 <p className="text-xs sm:text-sm">PM 2.5</p>
                 <p className="text-4xl sm:text-6xl font-bold leading-none">
-                  191
+                  51
                 </p>
                 <p className="text-xs sm:text-sm text-right">μg/m³</p>
               </div>
@@ -76,7 +76,7 @@ export default function CalidadAire() {
 
             {/* Texto principal */}
             <p className="font-bold text-2xl sm:text-4xl text-[#9e0c0d] pt-4 sm:pt-8">
-              Perjudicial
+              Moderado
             </p>
 
             {/* Imagen */}
@@ -116,14 +116,10 @@ export default function CalidadAire() {
 
       {/* Pronóstico por día */}
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-5xl">
-        <h2 className="font-bold text-lg text-[#113a58] mb-2">
-          Pronóstico por día
-        </h2>
-        <p className="text-xs text-gray-600 mb-4">
-          Pronóstico del Índice de Calidad del Aire por Partículas Finas (PM)
-        </p>
-
         <WeeklyForecast forecasts={weeklyForecastData} />
+        <p className="text-sm text-gray-700 mt-4 leading-relaxed">
+          El PM2.5 son partículas muy pequeñas que están en el aire, producidas por el humo de autos, fábricas, incendios o la quema de basura y leña. Al respirar, ingresan a los pulmones y pasan a la sangre, provocando enfermedades como asma, bronquitis, neumonía, problemas cardíacos, derrames cerebrales y cáncer de pulmón. Los más afectados son los niños, las personas mayores y las mujeres embarazadas.
+        </p>
       </div>
     </div>
   );

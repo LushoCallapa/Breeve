@@ -13,7 +13,6 @@ const Navbar = () => {
     { name: 'Inicio', to: '/' },
     { name: 'Mapa', to: '/mapa' },
     { name: 'Información', to: '/information' },
-    { name: 'Quienes somos', to: '/quienes-somos' },
   ];
 
   return (
