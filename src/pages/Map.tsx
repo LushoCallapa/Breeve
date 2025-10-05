@@ -1,9 +1,12 @@
 export default function AirQualityMap() {
   return (
-    <div className="relative w-full h-[calc(100vh-69px)] bg-black flex">
+    <div className="relative w-full lg:min-h-[calc(100vh-69px)] bg-black flex flex-col md:flex-row pt-14 lg:pt-0 overflow-hidden">
+      {/* Fondo de estrellas */}
       <div className="absolute inset-0 bg-[url('/star.png')] bg-cover bg-center"></div>
 
-      <div className="relative z-10 w-1/2 flex flex-col items-center justify-center gap-8 px-8">
+      {/* Sección de información */}
+      <div className="relative z-10 w-full md:w-1/2 flex flex-col items-center justify-center gap-8 px-8 py-8 lg:px-12 lg:pt-12">
+        {/* Formulario de búsqueda */}
         <form className="w-full max-w-md relative">
           <input
             type="text"
@@ -28,36 +31,23 @@ export default function AirQualityMap() {
           </span>
         </form>
 
-        <div className="w-full max-w-md pt-4 px-4 pb-6 rounded-3xl bg-transparent backdrop-blur-md text-white flex flex-col gap-4 border-2 border-white">
+        {/* Tarjeta de datos */}
+        <div className="w-full max-w-md pt-4 px-4 pb-6 rounded-3xl bg-black/30 backdrop-blur-md text-white flex flex-col gap-4 border-2 border-white">
           <div className="flex justify-between items-center">
-            <span className="font-bold pl-2 text-2xl">PM</span>
-            <span className="text-xl">Partículas Finas</span>
-            <span className="bg-green-500 px-2 py-1 rounded text-sm">
-              11 μg/m³
-            </span>
+            <span className="font-bold pl-2 text-3xl">PM</span>
+            <span className="text-2xl">Partículas Finas</span>
+            <span className="bg-green-500 px-2 py-1 rounded text-md">11 μg/m³</span>
           </div>
-          <div className="text-lg">
+          <div className="text-md lg:text-xl">
             <div className="bg-[#2b2f48]/60 p-2 rounded-full mb-6 text-center">
               Posición global: <strong>12</strong>
             </div>
             <div className="mt-2 bg-[#2b2f48]/60 p-2 mb-6 rounded-full">
               <div className="flex items-center justify-between gap-4">
                 <div className="text-center">Pronóstico de PM:</div>
-                <div className="text-center">
-                  Lunes
-                  <br />
-                  12
-                </div>
-                <div className="text-center">
-                  Martes
-                  <br />
-                  40
-                </div>
-                <div className="text-center">
-                  Miércoles
-                  <br />
-                  22
-                </div>
+                <div className="text-center">Lunes<br />12</div>
+                <div className="text-center">Martes<br />40</div>
+                <div className="text-center">Miércoles<br />22</div>
               </div>
             </div>
             <div className="mt-2 bg-[#2b2f48]/60 p-2 rounded-full text-center">
@@ -67,8 +57,9 @@ export default function AirQualityMap() {
         </div>
       </div>
 
-      <div className="relative z-10 w-1/2 flex items-center justify-center px-8">
-        <div className="w-full h-full aspect-square rounded-full shadow-lg overflow-hidden">
+      {/* Sección de imagen */}
+      <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center px-8 pt-8 lg:px-12 lg:pt-0">
+        <div className="w-full max-w-full h-auto aspect-square rounded-full shadow-lg overflow-hidden">
           <img
             src="/tierra.gif"
             alt="Tierra"

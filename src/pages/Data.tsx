@@ -21,20 +21,28 @@ export default function CalidadAire() {
 
   return (
     <div className="w-full bg-[#f5f7fb] text-[#113a58] p-6 flex flex-col items-center gap-6">
-      {/* Leyenda */}
-      <div className="flex flex-wrap justify-center gap-3 text-sm font-semibold mt-10 lg:mt-0">
-        <span className="bg-green-300 px-3 py-1 rounded">0–50 Bueno</span>
-        <span className="bg-yellow-300 px-3 py-1 rounded">51–100 Moderado</span>
-        <span className="bg-orange-300 px-3 py-1 rounded">
-          101–150 Perjudicial (grupos sensibles)
-        </span>
-        <span className="bg-red-300 px-3 py-1 rounded">
-          151–200 Perjudicial
-        </span>
-        <span className="bg-rose-300 px-3 py-1 rounded">201–300 Peligroso</span>
-        <span className="bg-purple-300 px-3 py-1 rounded">
-          301+ Muy perjudicial
-        </span>
+      {/* Leyenda con scroll horizontal */}
+      <div className="w-full mt-16 lg:mt-0 overflow-x-auto overflow-y-hidden">
+        <div className="flex gap-2 px-2 py-2 min-w-max">
+          <span className="bg-green-300 px-3 py-1 rounded flex-shrink-0 whitespace-nowrap">
+            0–50 Bueno
+          </span>
+          <span className="bg-yellow-300 px-3 py-1 rounded flex-shrink-0 whitespace-nowrap">
+            51–100 Moderado
+          </span>
+          <span className="bg-orange-300 px-3 py-1 rounded flex-shrink-0 whitespace-nowrap">
+            101–150 Perjudicial (grupos sensibles)
+          </span>
+          <span className="bg-red-300 px-3 py-1 rounded flex-shrink-0 whitespace-nowrap">
+            151–200 Perjudicial
+          </span>
+          <span className="bg-rose-300 px-3 py-1 rounded flex-shrink-0 whitespace-nowrap">
+            201–300 Peligroso
+          </span>
+          <span className="bg-purple-300 px-3 py-1 rounded flex-shrink-0 whitespace-nowrap">
+            301+ Muy perjudicial
+          </span>
+        </div>
       </div>
 
       <p className="text-center text-sm text-gray-600">
